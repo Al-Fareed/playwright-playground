@@ -22,7 +22,6 @@ test('user should be able to create account', async ({ page }) => {
     .acceptPrivacyPolicy()
     .createAccount();
 
-  await page.waitForLoadState('networkidle');
   await expect(page).toHaveTitle(/One Real: Agent Onboarding/);
 });
 
